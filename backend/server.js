@@ -34,7 +34,7 @@ app.use('/api/problems', problemRoutes);
 app.use('/api/solutions', solutionRoutes);
 
 // Pass the `io` instance to the request object
-app.use((req, res, next) => {
+app.use((req, next) => {
     req.io = io;
     next();
 });
